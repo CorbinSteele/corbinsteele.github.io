@@ -1,4 +1,4 @@
-CorbinSteele.github.io
+corbinsteele.github.io
 ======================
 
 Main Jekyll Site
