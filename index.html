@@ -4,21 +4,49 @@ layout: main
 
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <title>Corbin Steele</title>
-  <meta charset="UTF-8">
-  <meta name="author" content="Corbin Steele">
-  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-  <style>
-    img.stand {
-      margin: 3px;
-      padding: 2px;
-    }
-  </style>
-</head>
-<body>
-  <h1 style="text-align:center">Corbin Steele</h1>
-  <p>Hosted with GitHub Pages.</p>
-  <p>Currently in development.</p>
-</body>
+  <head>
+    <title>Corbin Steele</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Corbin Steele">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <style>
+      img.stand {
+        margin: 3px;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron" style="text-align:center">
+      <h1>Corbin Steele</h1>
+    </div>
+    <div class="container">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Submenu 1-1</a></li>
+            <li><a href="#">Submenu 1-2</a></li>
+            <li><a href="#">Submenu 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Hosted with GitHub Pages.</p>
+        </div>
+        <div class="col-sm-6">
+          <p>Currently in development.</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
