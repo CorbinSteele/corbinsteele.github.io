@@ -9,22 +9,30 @@
   <trustInfo>
     <security>
       <applicationRequestMinimum>
-        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" Unrestricted="true" ID="Custom" SameSite="site" />
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="Internet" Description="Default rights given to Internet applications" ID="Custom" SameSite="site">
+          <IPermission version="1" class="System.Security.Permissions.FileDialogPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Access="Open" />
+          <IPermission UserQuota="1024000" version="1" class="System.Security.Permissions.IsolatedStorageFilePermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Allowed="ApplicationIsolationByUser" />
+          <IPermission version="1" class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Flags="Execution" />
+          <IPermission version="1" class="System.Security.Permissions.UIPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Clipboard="OwnClipboard" Window="SafeTopLevelWindows" />
+          <IPermission version="1" class="System.Drawing.Printing.PrintingPermission, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Level="SafePrinting" />
+          <IPermission version="1" class="System.Security.Permissions.MediaPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Audio="SafeAudio" Image="SafeImage" Video="SafeVideo" />
+          <IPermission version="1" class="System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Level="Safe" />
+        </PermissionSet>
         <defaultAssemblyRequest permissionSetReference="Custom" />
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
-        <!-- UAC Manifest Options
-            If you want to change the Windows User Account Control level replace the 
-            requestedExecutionLevel node with one of the following.
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-            Specifying requestedExecutionLevel node will disable file and registry virtualization.
-            If you want to utilize File and Registry Virtualization for backward 
-            compatibility then delete the requestedExecutionLevel node.
-        -->
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
     </security>
@@ -49,7 +57,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qLheeZcSEd5HDM3dg7O6qw9VimCNWPe+Mrc6fCHYQjY=</dsig:DigestValue>
+        <dsig:DigestValue>dADuDGcOCD7tFfKyX+b/kUMPLPKpBer/WuzAQW20iVY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,16 +70,4 @@
       <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
     </hash>
   </file>
-  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
-    <application>
-      <!-- A list of all Windows versions that this application is designed to work with. 
-      Windows will automatically select the most compatible environment.-->
-      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
-      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
-      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
-      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
-      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
-      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
-    </application>
-  </compatibility>
-<publisherIdentity name="CN=Obsidian\Corbin" issuerKeyHash="ea805151275be3b18badb4e59130a7b9c8c8d816" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>4RoMMVNJi3M3K+ahJE19yaQFzkZtOLGWsT1hRuBO4Ok=</DigestValue></Reference></SignedInfo><SignatureValue>lkFmM4sGPolFDVSfs3cp5Yvyh2kGL8nkZjDacSlBqWhMQL6bPWFyT7Eknn2jgoxD5/48wEP/iu/4AagqXuqw/L6Q8JW6On9WWDwQUmkT6LHmmBJ3PE3y3YAnIvnF/tAq5JQVB7CAUE47n2UFsnLyIyx4r3KsC8gkBn0u5yQq5OM=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>psUYC9Fc4JTC9SzQC57gq+OtB3FTF7R3lpdTNP7XhO8MyG9EfaWAhF/UsufbmUkERV5bUXFIee4vHKnV6UglPfCfmF3/c3gG5nNB4yGQK375vbUsZqedy899AXqtTfMxMnPNvEc6xGEPE+/dNz7Hqb05ZH8FpjJU5HUsAhVZu1U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e9e04ee046613db196b1386d46ce05a4c97d4d24a1e62b37738b4953310c1ae1" Description="" Url=""><as:assemblyIdentity name="Sliding Puzzle Generator.exe" version="1.0.0.0" publicKeyToken="f237284733b355dd" language="en-US" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Obsidian\Corbin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>9mFiFWI+dxSOJcaoath3tax2Jj93cf8EJUN5n98S9G4=</DigestValue></Reference></SignedInfo><SignatureValue>Z+zD7lyeblXh6xFmD/B/Kmo3Qe4NKtkpuuO2VMXLg9SPqLa13rPPo7QTLgtLb6tDyzKLsDyV9ssjOWQMojUmV/e45aJSnT1kpdNyAcP2Y1gneGR58aqz2lh9v/nyH7OkUsyYUZDTU+o4or/HGMggdM6DG4IHZ4LdFt2IiplpcBs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>psUYC9Fc4JTC9SzQC57gq+OtB3FTF7R3lpdTNP7XhO8MyG9EfaWAhF/UsufbmUkERV5bUXFIee4vHKnV6UglPfCfmF3/c3gG5nNB4yGQK375vbUsZqedy899AXqtTfMxMnPNvEc6xGEPE+/dNz7Hqb05ZH8FpjJU5HUsAhVZu1U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQYUPbknlh+o5EkEww6OhuoTANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ATwBiAHMAaQBkAGkAYQBuAFwAQwBvAHIAYgBpAG4wHhcNMTQxMTExMDEwMjM2WhcNMTUxMTExMDcwMjM2WjApMScwJQYDVQQDHh4ATwBiAHMAaQBkAGkAYQBuAFwAQwBvAHIAYgBpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKbFGAvRXOCUwvUs0Aue4KvjrQdxUxe0d5aXUzT+14TvDMhvRH2lgIRf1LLn25lJBEVeW1FxSHnuLxyp1elIJT3wn5hd/3N4BuZzQeMhkCt++b21LGanncvPfQF6rU3zMTJzzbxHOsRhDxPv3Tc+x6m9OWR/BaYyVOR1LAIVWbtVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAo8Wbfe1GCldgra8W0bzyQY0Oolqnlcgn0LSj59/vy80U5TAq6rWCQ0DcnoXNOJZqz2Jt3FhApIWlGppOJ4h+r88Pyf+eIFGzCi+XdKROG2GqkuBwiLIqrD+AcwQxSkhrwraHMXQwwNL0d59tuJWsh7khG/bUbzBIzEA8OfbaEPM=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=Obsidian\Corbin" issuerKeyHash="ea805151275be3b18badb4e59130a7b9c8c8d816" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>jVN6103GqjhN6Gyu8FmLdDmfuzCPpoTbZgWlxQRgJ84=</DigestValue></Reference></SignedInfo><SignatureValue>i8+bhbf145jNKd7+cr+21bdrsve+CDx/jSMxNGiMXb5izo1XpGZK5HdEYCZr/mrPrsAukz5bMUYS7RwjoGupOaXsYchqxhUWMP0SEM03l2lic6EQoizOAvSel8iOBGctICwsUOk30a6o9PZDVR0jI1vzQUCos+672TbRFtIaUr8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>psUYC9Fc4JTC9SzQC57gq+OtB3FTF7R3lpdTNP7XhO8MyG9EfaWAhF/UsufbmUkERV5bUXFIee4vHKnV6UglPfCfmF3/c3gG5nNB4yGQK375vbUsZqedy899AXqtTfMxMnPNvEc6xGEPE+/dNz7Hqb05ZH8FpjJU5HUsAhVZu1U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="ce276004c5a50566db84a68f30bb9f39748b59f0ae6ce84d38aac64dd77a538d" Description="" Url=""><as:assemblyIdentity name="Sliding Puzzle Generator.exe" version="1.0.0.0" publicKeyToken="f237284733b355dd" language="en-US" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=Obsidian\Corbin</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>EtU5TndIcJ5iAfADP+buxzGWqR7j/y5v/dWQbYztUvI=</DigestValue></Reference></SignedInfo><SignatureValue>kTS3+jKZ5HpIcWCgzl8oNJBtsg5GU0yKmTmV0t1qwqawkW6O/N7wEuiOclMih1kHB2cNO4yMdlfAy18wA4m2iyb3M7K2qWrFHO8bqqzh4KGDEr19I1IrVTEIrE4opZJCVeJ/WVomy5eanF2sizSwcWjghTyIpO2nypE/ZP1iIV4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>psUYC9Fc4JTC9SzQC57gq+OtB3FTF7R3lpdTNP7XhO8MyG9EfaWAhF/UsufbmUkERV5bUXFIee4vHKnV6UglPfCfmF3/c3gG5nNB4yGQK375vbUsZqedy899AXqtTfMxMnPNvEc6xGEPE+/dNz7Hqb05ZH8FpjJU5HUsAhVZu1U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQYUPbknlh+o5EkEww6OhuoTANBgkqhkiG9w0BAQsFADApMScwJQYDVQQDHh4ATwBiAHMAaQBkAGkAYQBuAFwAQwBvAHIAYgBpAG4wHhcNMTQxMTExMDEwMjM2WhcNMTUxMTExMDcwMjM2WjApMScwJQYDVQQDHh4ATwBiAHMAaQBkAGkAYQBuAFwAQwBvAHIAYgBpAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKbFGAvRXOCUwvUs0Aue4KvjrQdxUxe0d5aXUzT+14TvDMhvRH2lgIRf1LLn25lJBEVeW1FxSHnuLxyp1elIJT3wn5hd/3N4BuZzQeMhkCt++b21LGanncvPfQF6rU3zMTJzzbxHOsRhDxPv3Tc+x6m9OWR/BaYyVOR1LAIVWbtVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAo8Wbfe1GCldgra8W0bzyQY0Oolqnlcgn0LSj59/vy80U5TAq6rWCQ0DcnoXNOJZqz2Jt3FhApIWlGppOJ4h+r88Pyf+eIFGzCi+XdKROG2GqkuBwiLIqrD+AcwQxSkhrwraHMXQwwNL0d59tuJWsh7khG/bUbzBIzEA8OfbaEPM=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
