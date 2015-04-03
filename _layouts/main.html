@@ -11,7 +11,8 @@ layout: main
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <style>
-      body {margin:0; background:#99EECC; font-size:20px;}
+      html, body {min-height:100%;}
+      body {position:relative; margin:0; background:#99EECC; font-size:20px;}
       h1 {color:#00B4B4; text-align:center;}
       footer {font-size:12px;}
     </style>
@@ -21,8 +22,9 @@ layout: main
     {% include navbar.html %}
     <div class="container">
       {{content}}
-      {% include footer.html %}
     </div>
+    
+    {% include footer.html %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
