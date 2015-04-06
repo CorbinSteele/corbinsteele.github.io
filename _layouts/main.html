@@ -32,6 +32,6 @@ layout: main
     var $navtab = $('.nav .dropdown').not('.open');
     $navtab.hover(
        function(){ $(this).addClass('open'); $(this).find('.dropdown-menu').attr('display', 'none'); $(this).find('.dropdown-menu').slideDown(500); },
-       function(){ $(this).find('.dropdown-menu').slideUp(500, function() { $navtab.removeClass('open'); }); }
+       function(){ $(this).removeClass('open'); $(this).find('.dropdown-menu').slideUp(500, function() { $navtab.removeClass('open'); }); }
 )</script>
   </body>
