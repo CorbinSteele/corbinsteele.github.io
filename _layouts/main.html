@@ -29,7 +29,8 @@ layout: main
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>$('.nav .dropdown').hover(
-       function(){ $(this .dropdown-menu).slideDown(500) },
-       function(){ $(this .dropdown-menu).slideDown(500) }
+       var $drop-menu = $(this .dropdown-menu);
+       function(){ $drop-menu.slideDown(500); },
+       function(){ $drop-menu.slideDown(500); }
 )</script>
   </body>
