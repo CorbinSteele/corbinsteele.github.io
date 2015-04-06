@@ -30,7 +30,7 @@ layout: main
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>
     var $nav-tab = $('.nav .dropdown').not('.open');
-    var $menu = $nav-button.find('.dropdown-menu');
+    var $menu = $nav-tab.find('.dropdown-menu');
     $nav-tab.hover(
        function(){ $(this).addClass('open'); $menu.attr('display', 'none'); $menu.slideDown(500); },
        function(){ $menu.slideUp(500, function() { $(this).removeClass('open'); }); }
