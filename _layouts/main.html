@@ -31,7 +31,7 @@ layout: main
     <script>
     var $navtab = $('.nav .dropdown');
     $navtab.hover(
-       function(){ if (!$(this).hasClass('opened')) { $(this).addClass('opened'); } else { $(this).find('.dropdown-menu').stop(); } $(this).find('.dropdown-menu').slideDown(500); },
-       function(){ $(this).find('.dropdown-menu').stop().slideUp(500, function() { $navtab.removeClass('opened'); }); }
+       function(){ $(this).find('.dropdown-menu').stop(); $(this).find('.dropdown-menu').slideDown(500); },
+       function(){ $(this).find('.dropdown-menu').stop().slideUp(500); }
 )</script>
   </body>
