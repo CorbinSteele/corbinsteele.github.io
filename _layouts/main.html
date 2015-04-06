@@ -29,9 +29,9 @@ layout: main
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script>
-    var $nav-tab = $('.nav .dropdown').not('.open');
-    var $menu = $nav-tab.find('.dropdown-menu');
-    $nav-tab.hover(
+    var $navtab = $('.nav .dropdown').not('.open');
+    var $menu = $navtab.find('.dropdown-menu');
+    $navtab.hover(
        function(){ $(this).addClass('open'); $menu.attr('display', 'none'); $menu.slideDown(500); },
        function(){ $menu.slideUp(500, function() { $(this).removeClass('open'); }); }
 )</script>
