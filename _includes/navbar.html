@@ -34,3 +34,11 @@
     </div>
   </div>
 </nav>
+
+<script>
+  var $navtab = $('.nav .dropdown');
+  $navtab.hover(
+   function(){ $(this).find('.dropdown-menu').stop(); $(this).find('.dropdown-menu').slideDown(500); },
+   function(){ $(this).find('.dropdown-menu').stop().slideUp(500); }
+ )
+</script>
