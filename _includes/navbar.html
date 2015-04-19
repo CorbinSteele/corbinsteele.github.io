@@ -45,13 +45,14 @@
     },
     mouseleave: function() {
       var $menu = $(this).siblings(":last");
+      $menu.clearQueue();
       $menu.stop();
       $menu.slideUp(500);
     },
     click: function() {
       var $menu = $(this).siblings(":last");
       if (!$menu.is(':animated')) {
-        $menu.slideUp(500);
+        $menu.slideToggle(500);
       }
     }
   });
