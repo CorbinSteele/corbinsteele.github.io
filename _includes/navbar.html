@@ -41,16 +41,18 @@
     mouseenter: function() {
       var $menu = $(this).siblings(":last");
       $menu.stop();
-      $menu.slideDown(500);
+      $menu.slideToggle(500);
     },
     mouseleave: function() {
       var $menu = $(this).siblings(":last");
       $menu.stop();
-      $menu.slideUp(500);
+      $menu.slideToggle(500);
     },
     click: function() {
       var $menu = $(this).siblings(":last");
-      $menu.stop();
+      if ($menu.is(':animated')) {
+        $menu.stop();
+      }
       $menu.slideToggle(500);
     }
   });
