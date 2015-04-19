@@ -56,7 +56,11 @@ $(document).ready(function() {
       event.preventDefault();
       var $menu = $(this).siblings(":last");
       if (!$menu.is(':animated')) {
-        $menu.slideToggle(500);
+        if ($menu.is(':visible')) {
+          $menu.slideUp(500);
+        } else {
+          $menu.slideDown(500);
+        }
       }
     }
   });
