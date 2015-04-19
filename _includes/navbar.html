@@ -39,21 +39,17 @@
 $(document).ready(function() {
   var $navtab = $('.dropdown-toggle');
   $navtab.on({
-    mouseenter: function( event ) {
-      event.preventDefault();
+    mouseenter: function() {
       var $menu = $(this).siblings(":last");
       $menu.stop();
       $menu.slideDown(500);
     },
-    mouseleave: function( event ) {
-      event.preventDefault();
+    mouseleave: function() {
       var $menu = $(this).siblings(":last");
-      $menu.clearQueue();
       $menu.stop();
       $menu.slideUp(500);
     },
-    click: function( event ) {
-      event.preventDefault();
+    click: function() {
       var $menu = $(this).siblings(":last");
       if (!$menu.is(':animated')) {
         if ($menu.is(':visible')) {
