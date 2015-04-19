@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav nav-justified">
         <li class="dropdown">
-          <a class="dropdown-toggle" href="/projects">Projects
+          <a class="dropdown-toggle" href="#">Projects
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/projects/executables">Executables</a></li>
@@ -22,7 +22,7 @@
         </li>
         <li><a href="/blog">Blog</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" href="/author">Author
+          <a class="dropdown-toggle" href="#">Author
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/author/profile">Profile</a></li>
@@ -36,20 +36,20 @@
 </nav>
 
 <script>
-  var $navtab = $('.nav .dropdown');
+  var $navtab = $('.dropdown-toggle');
   $navtab.on({
     mouseenter: function() {
-      var $menu = $(this).find('.dropdown-menu');
+      var $menu = $(this).siblings(":last");
       $menu.stop();
       $menu.slideDown(500);
     },
     mouseleave: function() {
-      var $menu = $(this).find('.dropdown-menu');
+      var $menu = $(this).siblings(":last");
       $menu.stop();
       $menu.slideUp(500);
     },
     click: function() {
-      var $menu = $(this).find('.dropdown-menu');
+      var $menu = $(this).siblings(":last");
       $menu.stop();
       $menu.slideToggle(500);
     }
