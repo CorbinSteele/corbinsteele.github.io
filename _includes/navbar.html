@@ -50,9 +50,7 @@
     },
     click: function() {
       var $menu = $(this).siblings(":last");
-      if ($menu.is(':animated')) {
-        $menu.stop();
-      }
+      $menu.stop();
       $menu.slideToggle(500);
     }
   });
