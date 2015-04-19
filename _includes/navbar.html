@@ -47,6 +47,12 @@
       var $menu = $(this).siblings(":last");
       $menu.stop();
       $menu.slideUp(500);
+    },
+    click: function() {
+      var $menu = $(this).siblings(":last");
+      if (!$menu.is(':animated')) {
+        $menu.slideToggle(500);
+      }
     }
   });
 </script>
