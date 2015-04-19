@@ -41,12 +41,12 @@
     mouseenter: function() {
       var $menu = $(this).siblings(":last");
       $menu.stop();
-      $menu.slideToggle(500);
+      $menu.slideDown(500);
     },
     mouseleave: function() {
       var $menu = $(this).siblings(":last");
-      $menu.slideUp(500);
       $menu.stop();
+      $menu.slideUp(500);
     },
     click: function() {
       var $menu = $(this).siblings(":last");
