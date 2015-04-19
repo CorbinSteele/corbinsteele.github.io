@@ -62,8 +62,8 @@ $(document).ready(function() {
   });
   
   $('.dropdown-menu').hover(
-    function() { $(this).stop(); $(this).show(); },
-    function() { $(this).hide(); }
+    function() { $(this).stop(); $(this).slideDown(500); },
+    function() { $(this).stop(); $(this).slideUp(500); }
   );
 });
 </script>
