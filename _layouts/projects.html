@@ -1,0 +1,38 @@
+---
+layout: projects
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+  {% include head.html %}
+
+  <body>
+  
+    {% include navbar.html %}
+    
+    {% include development.html %}
+    
+    <div class="container rectangle">
+      <h2>{{page.title}}</h2>
+      {% for project in page.projects %}
+        <div class="row">
+          <h2>{{project.title}}</h2>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+            <img src="{{project.image}}" class="img-rounded center-block" alt="{{project.name}} image" 
+              width="256" height="192" />
+          <div>
+          <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+            <p>
+              {{project.description}}
+            </p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% include footer.html %}
+  </body>
+</html>
