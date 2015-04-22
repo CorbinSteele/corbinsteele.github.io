@@ -15,18 +15,18 @@ layout: projects
     
     <div class="container rectangle">
       <h2>{{page.title}}</h2>
-      {% for project in page.projects %}
+      {% for item in page.projects %}
         <div class="row">
-          <h2>{{project.name}}</h2>
+          <h2>{{item.name}}</h2>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-            <img src="{{project.image}}" class="img-rounded center-block" alt="{{project.name}} image" 
+            <img src="{{item.image}}" class="img-rounded center-block" alt="{{item.name}} image" 
               width="256" height="192" />
           <div>
           <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
             <p>
-              {{project.description}}
+              {{item.description}}
             </p>
           </div>
         </div>
