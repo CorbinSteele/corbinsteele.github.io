@@ -16,18 +16,20 @@ layout: projects
     <div class="container rectangle">
       <h2>{{page.title}}</h2>
       {% for item in page.projects %}
-        <div class="row">
-          <h3>{{item.name}}</h3>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-            <img src="{{item.image}}" class="img-rounded center-block" alt="{{item.name}} image" 
-              width="150" height="150" />
+        <div class="container sub">
+          <div class="row">
+            <h3>{{item.name}}</h3>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
-            <p>
-              {{item.description}}
-            </p>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+              <img src="{{item.image}}" class="img-rounded center-block" alt="{{item.name}} image" 
+                width="150" height="150" />
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+              <p>
+                {{item.description}}
+              </p>
+            </div>
           </div>
         </div>
       {% endfor %}
