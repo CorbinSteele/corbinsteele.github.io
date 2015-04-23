@@ -36,7 +36,7 @@
 </nav>
 
 <script>
-$(document).ready(function() {
+var ready = function() {
   var $navtab = $('.dropdown-toggle');
   $navtab.on({
     mouseenter: function() {
@@ -66,4 +66,7 @@ $(document).ready(function() {
     function() { $(this).stop(); $(this).slideUp(500); }
   );
 });
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
 </script>
