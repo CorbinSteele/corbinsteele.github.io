@@ -16,7 +16,8 @@ layout: projects
     <div class="container rectangle">
       <h2>{{page.title}}</h2>
       {% for item in page.projects %}
-        <div class="sub-container-outer"><a class="sub-container-inner" href="{{item.link}}">
+        <div class="sub-container-outer"><div class="sub-container-inner">
+          <a href="{{item.link}}"><span class="sub-container-link"></span></a>
           <div class="row">
             <h3>{{item.name}}</h3>
           </div>
@@ -31,7 +32,7 @@ layout: projects
               </p>
             </div>
           </div>
-        </a></div>
+        </div></div>
       {% endfor %}
       
       {{content}}
