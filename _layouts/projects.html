@@ -15,25 +15,27 @@ layout: projects
     
     <div class="container rectangle">
       <h2>{{page.title}}</h2>
-      {% for item in page.projects %}
-        <div class="sub-container-outer"><div class="sub-container-inner">
-          <a href="{{item.link}}"><span class="sub-container-link"></span></a>
-          <div class="row">
-            <h3>{{item.name}}</h3>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
-              <img src="{{item.image}}" class="img-rounded center-block" alt="{{item.name}} image" 
-                width="160" height="160" />
+      <div class="sub-container-outer">
+        {% for item in page.projects %}
+          <div class="sub-container-inner">
+            <a href="{{item.link}}"><span class="sub-container-link"></span></a>
+            <div class="row">
+              <h3>{{item.name}}</h3>
             </div>
-            <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
-              <p>
-                {{item.description}}
-              </p>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                <img src="{{item.image}}" class="img-rounded center-block" alt="{{item.name}} image" 
+                  width="160" height="160" />
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                <p>
+                  {{item.description}}
+                </p>
+              </div>
             </div>
           </div>
-        </div></div>
-      {% endfor %}
+        {% endfor %}
+      </div>
       
       {{content}}
     </div>
