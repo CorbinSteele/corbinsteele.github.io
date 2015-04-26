@@ -3,8 +3,6 @@ title: Code Examples
 layout: projects
 posted: 04-26-15
 updated: 04-26-15
-projects:
-  - name: NONE
 ---
 
 ``` C#
