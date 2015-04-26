@@ -4,7 +4,7 @@ layout: projects
 posted: 04-26-15
 updated: 04-26-15
 projects:
-  - NONE
+  - name: NONE
 ---
 
 ``` C#
