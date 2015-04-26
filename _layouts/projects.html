@@ -15,11 +15,9 @@ layout: projects
     
     <div class="container rectangle">
       <h2>{{page.title}}</h2>
+      {% if page.projects %}
       <div class="sub-container-outer">
         {% for item in page.projects %}
-          if {% item.name == "NONE" %}
-            {% break %}
-          {% endif %}
           <div class="sub-container-inner">
             <a href="{{item.link}}"><span class="sub-container-link"></span></a>
             <div class="row">
@@ -40,6 +38,7 @@ layout: projects
           </div>
         {% endfor %}
       </div>
+      {% endif %}
       
       {{content}}
     </div>
