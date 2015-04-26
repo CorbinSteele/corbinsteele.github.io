@@ -6,7 +6,7 @@ updated: 04-26-15
 projects:
 ---
 
-```C#
+``` C#
 // Think of a Region as a shape, and this code should make sense.
   private Region GetHeart(Size size)
   {
