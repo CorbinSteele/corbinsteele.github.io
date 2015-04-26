@@ -5,7 +5,7 @@ posted: 04-26-15
 updated: 04-26-15
 ---
 
-{% highlight c# %}
+```csharp
 // Think of a Region as a shape, and this code should make sense.
   private Region GetHeart(Size size)
   {
@@ -42,4 +42,4 @@ updated: 04-26-15
 
       return regionTotal;
   }
-{% endhighlight %}
+```
