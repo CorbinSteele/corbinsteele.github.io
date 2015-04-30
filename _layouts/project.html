@@ -1,0 +1,135 @@
+---
+layout: main
+container: rectangle
+---
+
+<div class="row" style="text-align:center">
+<h2>
+<div class="col-xs-12 col-sm-6 col-sm-push-3 col-lg-8 col-lg-push-2">
+Sliding Puzzle Generator
+</div>
+</h2>
+<h4>
+<div class="col-xs-6 col-sm-3 col-sm-pull-6 col-lg-2 col-lg-pull-8"><br />
+<b>Publisher</b><hr />Corbin Steele
+</div>
+<div class="col-xs-6 col-sm-3 col-lg-2"><br />
+<b>Version</b><hr />1.3.0.0<br /><br />
+</div>
+</h4>
+</div>
+
+
+<div class="sub-container-outer">
+<div class="row">
+<div class="col-sm-5">
+<h3>&nbsp;</h3>
+<div class="col-sm-12 col-sm-offset-1 col-md-11">
+<img src="/C:/Website/CorbinSteele.github.io/img/sliding-puzzle-moon.png" class="img-responsive center-block" alt="Sliding Puzzle Generator image" />
+</div>
+&nbsp;
+</div>
+<div class="col-sm-7">
+<h3>Project Summary</h3>
+<div class="sub-container-inner">
+<p>
+{{content}}
+</p>
+</div></div>
+</div>
+</div>
+
+
+
+<div class="sub-container-outer">
+<h3>Download</h3>
+<div class="sub-container-inner">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-8">
+<h4 style="text-align:center"><b>Prerequisites</b><hr /></h4>
+<ul>
+<li>Windows Vista SP2 or later</li>
+<li>Microsoft .NET Framework 4.5</li>
+<li>Currently using Internet Explorer</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="hidden-xs col-sm-12">
+<br />
+<button onclick="window.navigate(InstallButton.href)" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
+</div>
+<div class="col-xs-12 col-sm-12">
+<button onclick="window.navigate('Sliding Puzzle Generator.application')" type="button" class="btn btn-primary btn-lg">Run</button>
+</div>
+</div>
+</div>
+<div align="center"><a href="http://go.microsoft.com/fwlink/?LinkId=154571" style="font-size:1rem; font-family:Tahoma; margin:1rem; color:#999; text-decoration:underline">ClickOnce and .NET Framework Resources</a></div>
+</div>
+</div>
+
+<br />
+
+<SCRIPT LANGUAGE="JavaScript">
+runtimeVersion = "4.5.0";
+checkClient = false;
+directLink = "Sliding Puzzle Generator.application";
+
+
+function Initialize()
+{
+  if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
+  {
+    InstallButton.href = directLink;
+    BootstrapperSection.style.display = "none";
+  }
+}
+function HasRuntimeVersion(v, c)
+{
+  var va = GetVersion(v);
+  var i;
+  var a = navigator.userAgent.match(/\.NET CLR [0-9.]+/g);
+  if(va[0]==4)
+    a = navigator.userAgent.match(/\.NET[0-9.]+E/g);
+  if (c)
+  {
+    a = navigator.userAgent.match(/\.NET Client [0-9.]+/g);
+    if (va[0]==4)
+       a = navigator.userAgent.match(/\.NET[0-9.]+C/g);
+  }
+  if (a != null)
+    for (i = 0; i < a.length; ++i)
+      if (CompareVersions(va, GetVersion(a[i])) <= 0)
+                                return true;
+  return false;
+}
+function GetVersion(v)
+{
+  var a = v.match(/([0-9]+)\.([0-9]+)\.([0-9]+)/i);
+  if(a==null)
+     a = v.match(/([0-9]+)\.([0-9]+)/i);
+  return a.slice(1);
+}
+function CompareVersions(v1, v2)
+{
+   if(v1.length>v2.length)
+   {
+      v2[v2.length]=0;
+   }  
+   else if(v1.length<v2.length)
+   {
+      v1[v1.length]=0;
+   }
+
+  for (i = 0; i < v1.length; ++i)
+  {
+    var n1 = new Number(v1[i]);
+    var n2 = new Number(v2[i]);
+    if (n1 < n2)
+      return -1;
+    if (n1 > n2)
+      return 1;
+  }
+  return 0;
+}
+
+</SCRIPT>
