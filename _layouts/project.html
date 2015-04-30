@@ -47,7 +47,7 @@ checkClient = false;
 
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  InstallButton.onclick = "window.location.href={{page.link}}";
+  InstallButton.onclick = "window.location.href='{{page.link}}'";
   
   BootstrapperSection.style.display = "none";
 }
