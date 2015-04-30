@@ -46,14 +46,12 @@ checkClient = false;
 directLink = "{{page.link}}";
 
 
-function Initialize()
+if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
-  {
-    InstallButton.href = directLink;
-    BootstrapperSection.style.display = "none";
-  }
+  InstallButton.href = directLink;
+  BootstrapperSection.style.display = "none";
 }
+
 function HasRuntimeVersion(v, c)
 {
   var va = GetVersion(v);
@@ -103,8 +101,6 @@ function CompareVersions(v1, v2)
   return 0;
 }
 
-$(document).ready(Initialize);
-$(document).on('page:load', Initialize);
 </SCRIPT>
 
 
