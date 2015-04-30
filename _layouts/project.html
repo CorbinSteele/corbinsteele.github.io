@@ -6,15 +6,15 @@ container: rectangle
 <div class="row" style="text-align:center">
 <h2>
 <div class="col-xs-12 col-sm-6 col-sm-push-3 col-lg-8 col-lg-push-2">
-Sliding Puzzle Generator
+{{page.title}}
 </div>
 </h2>
 <h4>
 <div class="col-xs-6 col-sm-3 col-sm-pull-6 col-lg-2 col-lg-pull-8"><br />
-<b>Publisher</b><hr />Corbin Steele
+<b>Publisher</b><hr />{{page.publisher}}
 </div>
 <div class="col-xs-6 col-sm-3 col-lg-2"><br />
-<b>Version</b><hr />1.3.0.0<br /><br />
+<b>Version</b><hr />{{page.version}}<br /><br />
 </div>
 </h4>
 </div>
@@ -25,7 +25,7 @@ Sliding Puzzle Generator
 <div class="col-sm-5">
 <h3>&nbsp;</h3>
 <div class="col-sm-12 col-sm-offset-1 col-md-11">
-<img src="/img/sliding-puzzle-moon.png" class="img-responsive center-block" alt="Sliding Puzzle Generator image" />
+<img src={{page.image}} class="img-responsive center-block" alt={{page.title}} + " image" />
 </div>
 &nbsp;
 </div>
@@ -59,7 +59,7 @@ Sliding Puzzle Generator
 <button onclick="window.navigate(InstallButton.href)" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
 </div>
 <div class="col-xs-12 col-sm-12">
-<button onclick="window.navigate('Sliding Puzzle Generator.application')" type="button" class="btn btn-primary btn-lg">Run</button>
+<button onclick="window.navigate('" + {{page.link}} + "')" type="button" class="btn btn-primary btn-lg">Run</button>
 </div>
 </div>
 </div>
@@ -70,9 +70,9 @@ Sliding Puzzle Generator
 <br />
 
 <SCRIPT LANGUAGE="JavaScript">
-runtimeVersion = "4.5.0";
+runtimeVersion = {{page.netversion}};
 checkClient = false;
-directLink = "Sliding Puzzle Generator.application";
+directLink = {{page.link}};
 
 
 function Initialize()
