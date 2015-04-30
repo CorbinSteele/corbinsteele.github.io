@@ -40,35 +40,6 @@ container: rectangle
 </div>
 
 
-
-<div class="sub-container-outer">
-<h3>Download</h3>
-<div class="sub-container-inner">
-<div class="row">
-<div class="col-xs-12 col-sm-6 col-md-8">
-<h4 style="text-align:center"><b>Prerequisites</b><hr /></h4>
-<ul>
-<li>Windows Vista SP2 or later</li>
-<li>Microsoft .NET Framework 4.5</li>
-<li>Currently using Internet Explorer</li>
-</ul>
-</div>
-<div class="col-xs-12 col-sm-6 col-md-4">
-<div class="hidden-xs col-sm-12">
-<br />
-<button onclick="window.navigate(InstallButton.href)" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
-</div>
-<div class="col-xs-12 col-sm-12">
-<button type="button" class="btn btn-primary btn-lg" onclick="window.navigate('{{ page.link }}')">Run</button>
-</div>
-</div>
-</div>
-<div align="center"><a href="http://go.microsoft.com/fwlink/?LinkId=154571" style="font-size:1rem; font-family:Tahoma; margin:1rem; color:#999; text-decoration:underline">ClickOnce and .NET Framework Resources</a></div>
-</div>
-</div>
-
-<br />
-
 <SCRIPT LANGUAGE="JavaScript">
 runtimeVersion = "{{page.netversion}}";
 checkClient = false;
@@ -133,3 +104,32 @@ function CompareVersions(v1, v2)
 }
 
 </SCRIPT>
+
+
+<div class="sub-container-outer">
+<h3>Download</h3>
+<div class="sub-container-inner">
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-8">
+<h4 style="text-align:center"><b>Prerequisites</b><hr /></h4>
+<ul>
+<li>Windows Vista SP2 or later</li>
+<li>Microsoft .NET Framework 4.5</li>
+<li>Currently using Internet Explorer</li>
+</ul>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+<div class="hidden-xs col-sm-12">
+<br />
+<button onclick="window.navigate(InstallButton.href)" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
+</div>
+<div class="col-xs-12 col-sm-12">
+<button type="button" class="btn btn-primary btn-lg" onclick="window.navigate('{{ page.link }}')">Run</button>
+</div>
+</div>
+</div>
+<div align="center"><a href="http://go.microsoft.com/fwlink/?LinkId=154571" style="font-size:1rem; font-family:Tahoma; margin:1rem; color:#999; text-decoration:underline">ClickOnce and .NET Framework Resources</a></div>
+</div>
+</div>
+
+<br />
