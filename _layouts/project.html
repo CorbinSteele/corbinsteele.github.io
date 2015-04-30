@@ -43,12 +43,11 @@ container: rectangle
 <SCRIPT LANGUAGE="JavaScript">
 runtimeVersion = "{{page.netversion}}";
 checkClient = false;
-directLink = "{{page.link}}";
 
 
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  $('#InstallButton').attr('onclick', "window.location.href='" + directLink + "'");
+  InstallButton.onclick = "window.location.href={{page.link}}");
   
   BootstrapperSection.style.display = "none";
 }
