@@ -36,8 +36,7 @@
 </nav>
 
 <script>
-var $navtab = $('.dropdown-toggle');
-$navtab.on({
+$('.dropdown-toggle').on({
   mouseenter: function() {
     var $menu = $(this).siblings(":last");
     $menu.stop();
@@ -64,6 +63,5 @@ $('.dropdown-menu').hover(
   function() { $(this).stop(); $(this).slideDown(500); },
   function() { $(this).stop(); $(this).slideUp(500); }
   );
-};
 
 </script>
