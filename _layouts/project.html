@@ -48,7 +48,7 @@ directLink = "{{page.link}}";
 
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  InstallButton.href = directLink;
+  InstallButton.onclick = "window.location.href='" + directLink + "'";
   BootstrapperSection.style.display = "none";
 }
 
@@ -119,7 +119,7 @@ function CompareVersions(v1, v2)
 <div class="col-xs-12 col-sm-6 col-md-4">
 <div class="hidden-xs col-sm-12">
 <br />
-<button onclick="window.location.href=InstallButton.href" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
+<button id="InstallButton" onclick="window.location.href='{{ setup.exe }}'" type="button" class="btn btn-primary btn-lg">Install<br />Prerequisites</button>
 </div>
 <div class="col-xs-12 col-sm-12">
 <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='{{ page.link }}'">Run</button>
