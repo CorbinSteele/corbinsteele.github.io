@@ -46,7 +46,7 @@ checkClient = false;
 directLink = "{{page.link}}";
 
 
-var ready = function Initialize()
+function Initialize()
 {
   if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
   {
@@ -103,8 +103,8 @@ function CompareVersions(v1, v2)
   return 0;
 }
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+$(document).ready(Initialize);
+$(document).on('page:load', Initialize);
 </SCRIPT>
 
 
