@@ -48,7 +48,8 @@ directLink = "{{page.link}}";
 
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  InstallButton.onclick = "window.location.href='" + directLink + "'";
+  $('#InstallButton').attr('onclick', "window.location.href='" + directLink + "'");
+  
   BootstrapperSection.style.display = "none";
 }
 
