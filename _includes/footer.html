@@ -13,7 +13,12 @@
 </footer>
 
 <script>
-var arr = $(script);
-for (var n = 0; n < arr.length; n++)
-    eval(arr[n].innerHTML);
+var ready = function() {
+  $('script').each(function() {
+    eval($(this).innerHTML);
+  });
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
 </script>
