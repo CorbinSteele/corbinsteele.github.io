@@ -94,11 +94,9 @@ function CompareVersions(v1, v2)
   return 0;
 }
 
-alert($('#InstallButton').attr('onclick'));
-alert(HasRuntimeVersion(runtimeVersion, false));
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
-  InstallButton.onclick = "window.location.href='{{page.link}}'";
+  $('#InstallButton').attr('onclick', "window.location.href='{{page.link}}'");
   BootstrapperSection.style.display = "none";
 }
 
