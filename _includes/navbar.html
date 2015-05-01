@@ -24,35 +24,36 @@
       </li>
     </ul>
   </div>
-</nav>
-
-<script>
-$('.dropdown-toggle').on({
-  mouseenter: function() {
-    var $menu = $(this).siblings(":last");
-    $menu.stop();
-    $menu.slideDown(500);
-  },
-  mouseleave: function() {
-    var $menu = $(this).siblings(":last");
-    $menu.stop();
-    $menu.slideUp(500);
-  },
-  click: function() {
-    var $menu = $(this).siblings(":last");
-    if (!$menu.is(':animated')) {
-      if ($menu.is(':visible')) {
-        $menu.slideUp(500);
-      } else {
-        $menu.slideDown(500);
+  
+  <script>
+  $('.dropdown-toggle').on({
+    mouseenter: function() {
+      var $menu = $(this).siblings(":last");
+      $menu.stop();
+      $menu.slideDown(500);
+    },
+    mouseleave: function() {
+      var $menu = $(this).siblings(":last");
+      $menu.stop();
+      $menu.slideUp(500);
+    },
+    click: function() {
+      var $menu = $(this).siblings(":last");
+      if (!$menu.is(':animated')) {
+        if ($menu.is(':visible')) {
+          $menu.slideUp(500);
+        } else {
+          $menu.slideDown(500);
+        }
       }
     }
-  }
-});
+  });
   
-$('.dropdown-menu').hover(
-  function() { $(this).stop(); $(this).slideDown(500); },
-  function() { $(this).stop(); $(this).slideUp(500); }
-  );
+  $('.dropdown-menu').hover(
+    function() { $(this).stop(); $(this).slideDown(500); },
+    function() { $(this).stop(); $(this).slideUp(500); }
+    );
 
-</script>
+  </script>
+
+</nav>
