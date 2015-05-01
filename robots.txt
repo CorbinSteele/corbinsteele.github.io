@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /projects/index.html
+Disallow: /author/index.html
