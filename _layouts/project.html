@@ -97,7 +97,7 @@ function CompareVersions(v1, v2)
 if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
 {
   InstallButton.onclick = "window.location.href='{{page.link}}'";
-  
+  alert(InstallButton.onclick);
   BootstrapperSection.style.display = "none";
 }
 
