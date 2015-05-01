@@ -45,13 +45,6 @@ runtimeVersion = "{{page.netversion}}";
 checkClient = false;
 
 
-if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
-{
-  InstallButton.onclick = "window.location.href='{{page.link}}'";
-  
-  BootstrapperSection.style.display = "none";
-}
-
 function HasRuntimeVersion(v, c)
 {
   var va = GetVersion(v);
@@ -99,6 +92,13 @@ function CompareVersions(v1, v2)
       return 1;
   }
   return 0;
+}
+
+if (HasRuntimeVersion(runtimeVersion, false) || (checkClient && HasRuntimeVersion(runtimeVersion, checkClient)))
+{
+  InstallButton.onclick = "window.location.href='{{page.link}}'";
+  
+  BootstrapperSection.style.display = "none";
 }
 
 </SCRIPT>
