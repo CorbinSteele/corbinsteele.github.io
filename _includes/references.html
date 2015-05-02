@@ -9,15 +9,15 @@
               <dt>
                 {{item.description}}:
               </dt>
-              <dd>
-                <a href="{{item.link}}">
+              <a href="{{item.link}}">
+                <span class="sub-container-link"></span>
+                {% if item.glyphicon %}
+                  <span class="glyphicon {{item.glyphicon}}" aria-hidden="true"></span>
+                {% endif %}
+                <dd>
                   {{item.name}}
-                  {% if item.glyphicon %}
-                    <span class="glyphicon {{item.glyphicon}}" aria-hidden="true"></span>
-                  {% endif %}
-                  <span class="sub-container-link"></span>
-                </a>
-              </dd>
+                </dd>
+              </a>
             </div>
           {% endfor %}
         </dl>
