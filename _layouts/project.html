@@ -110,9 +110,15 @@ container: rectangle
       <div class="col-xs-12 col-sm-6 col-md-8">
         <h4 style="text-align:center"><b>Prerequisites</b><hr /></h4>
         <ul>
-          <li>Windows Vista SP2 or later</li>
-          <li>Microsoft .NET Framework 4.5</li>
-          <li>Currently using Internet Explorer</li>
+          {% if page.prerequisites}
+            {% for item in page.references %}
+              <li>item</li>
+            {% endfor %}
+          {% else %}
+            <li>Windows Vista SP2 or later</li>
+            <li>Microsoft .NET Framework 4.5</li>
+            <li>Currently using Internet Explorer</li>
+          {% endif %}
         </ul>
       </div>
       <div class="col-xs-12 col-sm-6 col-md-4">
