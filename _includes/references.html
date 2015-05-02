@@ -12,8 +12,8 @@
               <dd>
                 <a href="{{item.link}}">
                   {{item.name}}
-                  {% if glyphicon %}
-                    <span class="glyphicon {{glyphicon}} sub-container-link" aria-hidden="true"></span>
+                  {% if item.glyphicon %}
+                    <span class="glyphicon {{item.glyphicon}} sub-container-link" aria-hidden="true"></span>
                   {% else %}
                     <span class="sub-container-link"></span>
                   {% endif %}
