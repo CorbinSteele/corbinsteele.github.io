@@ -39,6 +39,28 @@ container: rectangle
 </div>
 </div>
 
+{% if page.references %}
+<div class="sub-container-outer">
+<h3>Related Links</h3>
+<div class="sub-container-inner">
+<div class="row">
+<div class="col-xs-12">
+<dl>
+{% for item in page.references %}
+<dt>
+{{item.description}}:
+</dt>
+<dd>
+<a href="{{item.link}}">{{item.name}}</a>
+</dd>
+{% endfor %}
+</dl>
+</div>
+</div>
+</div>
+</div>
+{% endif %}
+
 
 <SCRIPT LANGUAGE="JavaScript">
 runtimeVersion = "{{page.netversion}}";
