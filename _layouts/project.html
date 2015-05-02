@@ -112,7 +112,7 @@ container: rectangle
         <ul>
           {% if page.prerequisites}
             {% for item in page.references %}
-              <li>item</li>
+              <li>{{ item }}</li>
             {% endfor %}
           {% else %}
             <li>Windows Vista SP2 or later</li>
