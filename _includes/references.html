@@ -1,0 +1,21 @@
+{% if page.references %}
+  <div class="sub-container-outer">
+    <h3>Related Links</h3>
+    <div class="sub-container-inner">
+      <div class="row">
+        <dl>
+          {% for item in page.references %}
+            <div class="col-xs-12 col-md-6">
+              <dt>
+                {{item.description}}:
+              </dt>
+              <dd>
+                <a href="{{item.link}}">{{item.name}}</a>
+              </dd>
+            </div>
+          {% endfor %}
+        </dl>
+      </div>
+    </div>
+  </div>
+{% endif %}
