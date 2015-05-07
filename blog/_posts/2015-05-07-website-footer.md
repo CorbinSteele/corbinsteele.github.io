@@ -1,7 +1,6 @@
 ---
 title: Website Footer
-layout: main
-container: rectangle
+layout: blogpost
 posted: 05-07-2015
 updated: 05-07-2015
 description: Oh, the headaches involved when you just want to add a simple footer to a website.
