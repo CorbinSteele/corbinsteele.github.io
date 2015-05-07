@@ -14,8 +14,6 @@ I loathe the short "do it because it works" methodology. As such, I investigated
 
 Eventually, I gathered enough information to take another, informed, crack at the problem myself. This is what I came up with. As far as I know, this solution has probably been implemented countless of times on the web, but the exact components and requirements aren't clearly laid out in any one place. Cue the creation of this blog post.
 
-HTML consists of boxes containing other boxes. At the lowest level, the boxes contain simple content, such as text. The size and location of each box is determined by many things: the size of the box containing it, the location of the box containing it, the boxes and content within it, the other boxes and content within the box containing it, its own CSS, the CSS of the box containing it, and potentially the CSS of any other boxes that contain that box in any way. Needless to say, this gets very complicated, because the size and location of a box is dependent on the size and location of its container, and the size and location of the container is dependent on the size and location of its contents.
-
 Here are the minimum requirements for a footer using this method:
 {% highlight html %}
 html { height:100%; }
@@ -33,3 +31,7 @@ Additionally, be aware that the footer is considered part of the body, so any ab
   * Setting <body> position to relative does absolutely nothing to the size or location of the <body> box itself. However, it is necessary because setting the <footer> box's position to absolute causes the <footer> box's position to be determined by the next box up the change that has had it's position attribute hard-set in some way (or <html> if none have). Without setting this attribute in <body>, the <footer> would be placed "absolute" with respect to the <html> box instead, leading to it being over any content that overflows the browser window height.
   * Setting <footer> position to absolute ignores all padding and margin settings, and simply places the box in some "absolute" position with respect to it's first container that has also had its position attribute set.
   * Setting <footer> bottom to 0 causes it to be placed at the very bottom of <body> in this specific case. Which is precisely where the padding-bottom is.
+
+### Other Rambling:
+
+HTML consists of boxes containing other boxes. At the lowest level, the boxes contain simple content, such as text. The size and location of each box is determined by many things: the size of the box containing it, the location of the box containing it, the boxes and content within it, the other boxes and content within the box containing it, its own CSS, the CSS of the box containing it, and potentially the CSS of any other boxes that contain that box in any way. Needless to say, this gets very complicated, because the size and location of a box is dependent on the size and location of its container, and the size and location of the container is dependent on the size and location of its contents.
