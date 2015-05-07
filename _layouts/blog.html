@@ -7,11 +7,9 @@ container: rectangle
   {{page.title}}
 </h2>
 
-<small>
-  {{content}}
-</small>
-
-<br />
+<div class="container-fluid">
+  <small>{{content}}</small>
+</div>
 
 {% if site.categories.[page.category] %}
   <div class="sub-container-outer">
