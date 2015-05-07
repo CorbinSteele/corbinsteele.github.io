@@ -3,7 +3,14 @@ layout: main
 container: rectangle
 ---
 
-<h2>{{page.title}}</h2>
+<h2>
+  {{page.title}}
+</h2>
+
+<p>
+  {{content}}
+</p>
+
 {% if site.categories.[page.category] %}
   <div class="sub-container-outer">
     {% for post in site.categories.[page.category] %}
@@ -28,5 +35,3 @@ container: rectangle
     {% endfor %}
   </div>
 {% endif %}
-      
-{{content}}
