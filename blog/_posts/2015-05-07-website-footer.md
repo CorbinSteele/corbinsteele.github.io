@@ -32,6 +32,6 @@ Additionally, be aware that the footer is considered part of the body, so any ab
   * Setting `footer` `position` to `absolute` ignores all `padding` and `margin` attributes, and simply places the `footer` in some "absolute" position with respect to it's first container that has also had its `position` attribute set.
   * Setting `footer` `bottom` to `0` causes it to be placed at the very bottom of `body` in this specific case. Which is precisely where the `padding-bottom` is.
 
-### Other Rambling:
+### Additional Rambling:
 
 HTML consists of boxes (or containers) containing other boxes. At the lowest level, the boxes contain simple content, such as text. The size and location of each box is determined by many things: the size of the box containing it, the location of the box containing it, the boxes and content within it, the other boxes and content within the box containing it, its own CSS, the CSS of the box containing it, and potentially the CSS of any other boxes that contain that box in any way. Needless to say, this gets very complicated, because the size and location of a box is dependent on the size and location of its container, and the size and location of the container is dependent on the size and location of its contents.
