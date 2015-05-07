@@ -8,7 +8,7 @@ description: Oh, the headaches involved when you just want to add a simple foote
 
 While putting together this very website, I wanted to add a simple footer bar to the bottom of every page. I wanted it to follow all content on the page, while also never being above the bottom of the browser window if there was less than a full page's worth of content. It sounds like a simple task, but it wasn't immediately apparent how to go about such a layout in the best way.
 
-After searching online, I discovered a remarkable lack of solutions considering how simple and common of a problem this is. The best and most commonly cited solution I could find was by a certain *ryan* at *website address*. This solution, while a thorough and robust solution, required 4 divs and a non-trivial amount of CSS to implement. Additionally, I found the explanation of the solution to be confusing at best.
+After searching online, I discovered a remarkable lack of solutions considering how simple and common of a problem this is. The best and most commonly cited solution I could find was by a certain [Ryan Fait](http://ryanfait.com/resources/footer-stick-to-bottom-of-page/). This solution, while a thorough and robust solution, required 4 divs and a non-trivial amount of CSS to implement. Additionally, I found the explanation of the solution to be confusing at best.
 
 I loathe the short "do it because it works" methodology. As such, I investigated exactly how HTML and CSS percentage sizing works, and did further research online jumping from forum to forum. Doing the kind of stuff that makes you feel like you might accomplish something at any minute, only to leave you disappointed when you see the same useless information in a slightly different form.
 
