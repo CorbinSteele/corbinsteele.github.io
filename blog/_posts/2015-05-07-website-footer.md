@@ -15,11 +15,11 @@ Eventually, I gathered enough information to take another, informed, crack at th
 HTML consists of boxes containing other boxes. At the lowest level, the boxes contain simple content, such as text. The size and location of each box is determined by many things: the size of the box containing it, the location of the box containing it, the boxes and content within it, the other boxes and content within the box containing it, its own CSS, the CSS of the box containing it, and potentially the CSS of any other boxes that contain that box in any way. Needless to say, this gets very complicated, because the size and location of a box is dependent on the size and location of its container, and the size and location of the container is dependent on the size and location of its contents.
 
 Here are the minimum requirements for a footer using this method:
-```
-html {height:100%;}
-body {min-height:100%; padding-bottom:[footer-height]; position:relative;}
-footer {position:absolute; bottom:0;}
-```
+{% highlight html %}
+html { height:100%; }
+body { min-height:100%; padding-bottom:[footer-height]; position:relative; }
+footer { position:absolute; bottom:0; }
+{% endhighlight %}
 
 This requires that you know the height of your footer in pixels (or em, or whatever). All other pure HTML and CSS solutions that I've found have that same restriction though, so that's not surprising.
 Additionally, be aware that the footer is considered part of the body, so any absolute positioning with respect to the bottom of the body must take the footer into account. This seems intuitive enough in my humble opinion, but it's still an important aspect to be aware of.
