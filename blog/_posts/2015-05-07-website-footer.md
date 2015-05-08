@@ -3,7 +3,7 @@ title: Website Footer
 layout: blogpost
 posted: 05-07-2015
 updated: 05-07-2015
-description: Oh, the headaches involved when you just want to add a simple footer to a website.
+excerpt: Oh, the headaches involved when you just want to add a simple footer to a website.
 ---
 
 While putting together this very website, I wanted to add a simple footer bar to the bottom of every page. I wanted it to follow all content on the page, while also never being above the bottom of the browser window if there was less than a full page's worth of content. It sounds like a simple task, but it wasn't immediately apparent how to go about such a layout in the best way.
