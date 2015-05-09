@@ -5,6 +5,6 @@ author: "Corbin Steele"
 author_email: ""
 
 category_dir: /
-permalink: /:category/:title
+permalink: /:categories/:title
 
 excerpt_separator: ""
