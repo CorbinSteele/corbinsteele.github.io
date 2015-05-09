@@ -6,7 +6,7 @@ updated: 05-08-15
 excerpt: Making a heart from simple geometric boolean operations.
 ---
 
-```csharp
+{% highlight c# %}
 using System.Drawing;
 
 // Think of a Region as a shape, and this code should make sense.
@@ -45,4 +45,4 @@ private Region GetHeart(Size size)
 
     return regionTotal;
 }
-```
+{% endhighlight %}
