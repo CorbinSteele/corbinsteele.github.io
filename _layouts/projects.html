@@ -1,47 +1,31 @@
 ---
-layout: projects
+layout: main
+container: rectangle
 ---
 
-<!DOCTYPE html>
-<html lang="en-US">
-
-  {% include head.html %}
-
-  <body>
-  
-    {% include navbar.html %}
-    
-    {% include development.html %}
-    
-    <div class="container rectangle">
-      <h2>{{page.title}}</h2>
-      {% if page.projects %}
-      <div class="sub-container-outer">
-        {% for item in page.projects %}
-          <div class="sub-container-inner">
-            <a name="{{item.name | downcase | replace: ' ', '-'}}" href="{{item.link}}"><span class="sub-container-link"></span></a>
-            <div class="row">
-              <h3>{{item.name}}</h3>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <img src="{{item.image}}" class="img-rounded" alt="{{item.name}} image" 
-                  width="150" height="150" />
-              </div>
-              <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                <p>
-                  {{item.description}}
-                </p>
-              </div>
-            </div>
+<h2>{{page.title}}</h2>
+{% if page.projects %}
+  <div class="sub-container-outer">
+    {% for item in page.projects %}
+      <div class="sub-container-inner">
+        <a name="{{item.name | downcase | replace: ' ', '-'}}" href="{{item.link}}"><span class="sub-container-link"></span></a>
+        <div class="row">
+          <h3>{{item.name}}</h3>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+            <img src="{{item.image}}" class="img-rounded" alt="{{item.name}} image" 
+              width="150" height="150" />
           </div>
-        {% endfor %}
+          <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+            <p>
+              {{item.description}}
+            </p>
+          </div>
+        </div>
       </div>
-      {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}
       
-      {{content}}
-    </div>
-    
-    {% include footer.html %}
-  </body>
-</html>
+{{content}}
