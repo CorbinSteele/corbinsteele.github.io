@@ -7,7 +7,7 @@
         <h3>{{container.name}}</h3>
         <div class="sub-container-inner">
           <div style="position:absolute">
-            {% include_relative _includes/{{container.content}} %}
+            {% include_relative {{container.content}} %}
           </div>
           <div style="margin-bottom:50%"></div>
         </div>
