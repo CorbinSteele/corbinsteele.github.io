@@ -5,7 +5,10 @@
     {% for container in page.containers %}
       <div class="col-md-6">
         <div class="sub-container-inner">
-          {{container.content}}
+          <div style="position:absolute">
+            {{container.content}}
+          </div>
+          <div style="margin-bottom:50%"></div>
         </div>
       </div>
     {% endfor %}
