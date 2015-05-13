@@ -4,7 +4,12 @@
   <div class="row">
     {% for container in page.containers %}
       <div class="col-md-6">
-        <h3>{{container.name}}</h3>
+        <div class="link-container">
+          <h3>{{container.name}}</h3>
+          <a href="{{container.content}}">
+            <span class="sub-container-link"></span>
+          </a>
+        </div>
         <div class="sub-container-inner">
           <div class="fixed">
             {% include_relative {{container.content}} inner=true %}
