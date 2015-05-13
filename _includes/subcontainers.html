@@ -13,7 +13,7 @@
         <div class="sub-container-inner">
           <div class="fixed">
             {% capture subcontent %}{% include_relative {{container.content}} | split: '---' %}{% endcapture %}
-            {{subcontent[2]}}
+            {{subcontent[1]}}
           </div>
           <div style="margin-bottom:{{page.subcontainerheight}}"></div>
         </div>
