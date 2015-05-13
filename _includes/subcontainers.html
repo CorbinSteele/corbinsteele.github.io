@@ -14,7 +14,7 @@
           <div class="fixed">
             {% capture allcontent %}{% include_relative {{container.content}} %}{% endcapture %}
             {% assign subcontent = allcontent | split: '---' %}
-            {{subcontent[1]}}
+            {{subcontent[2]}}
           </div>
           <div style="margin-bottom:{{page.subcontainerheight}}"></div>
         </div>
