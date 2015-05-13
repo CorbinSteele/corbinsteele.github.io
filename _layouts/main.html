@@ -2,21 +2,26 @@
 layout: main
 ---
 
-<!DOCTYPE html>
-<html lang="en-US">
+{% if include.inner %}
+  {{content}}
+{% else %}
+  <!DOCTYPE html>
+  <html lang="en-US">
 
-  {% include head.html %}
+    {% include head.html %}
 
-  <body>
+    <body>
   
-    {% include navbar.html %}
+      {% include navbar.html %}
     
-    {% include development.html %}
+      {% include development.html %}
     
-    <div class="container {{page.container}}">
-      {{content}}
-    </div>
+      <div class="container {{page.container}}">
+        {{content}}
+      </div>
     
-    {% include footer.html %}
-  </body>
-</html>
+      {% include footer.html %}
+    </body>
+  </html>
+
+{% endif %}
