@@ -1,6 +1,8 @@
 ---
 ---
-
+{% if include.inner %}
+  {{content}}
+{% else %}
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -19,3 +21,4 @@
     {% include footer.html %}
   </body>
 </html>
+{% endif %}
