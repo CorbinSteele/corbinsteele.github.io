@@ -1,0 +1,11 @@
+---
+layout: main
+container: rectangle
+---
+
+{% if include.inner %}
+  {% capture subcontent %}{{content | split: '---'}}{% endcapture %}
+  {{subcontent[2]}}
+{% else %}
+  {{content}}
+{% endif %}
