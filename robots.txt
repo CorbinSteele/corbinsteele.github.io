@@ -1,3 +1,4 @@
 User-agent: *
+Disallow: /temp/
 Disallow: /projects/index.html
 Disallow: /author/index.html
