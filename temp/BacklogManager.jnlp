@@ -11,7 +11,7 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BacklogManager.jar" size="26154" download="eager" />
+    <jar href="BacklogManager.jar" size="26457" download="eager" />
   </resources>
   <applet-desc  width="500" height="500" main-class="com.javafx.main.NoJavaFXFallback"  name="BacklogManager" >
     <param name="requiredFXVersion" value="2.2+"/>
