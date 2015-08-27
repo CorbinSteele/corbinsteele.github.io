@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<backlog index="0" name="test">
+    <backlogItem>
+        <completed>false</completed>
+        <description>Make Scrum program</description>
+    </backlogItem>
+    <backlogItem>
+        <completed>false</completed>
+        <description>Deploy Scrum program</description>
+    </backlogItem>
+    <backlogItem>
+        <completed>false</completed>
+        <description>Profit!</description>
+    </backlogItem>
+</backlog>
