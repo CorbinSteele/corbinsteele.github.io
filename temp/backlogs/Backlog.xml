@@ -12,4 +12,8 @@
         <completed>false</completed>
         <description>Profit!</description>
     </backlogItem>
+    <backlogItem>
+        <completed>false</completed>
+        <description>In Github!</description>
+    </backlogItem>
 </backlog>
