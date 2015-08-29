@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_60" class="java.beans.XMLDecoder">
+ <object class="com.carefulcoding.backlogmanager.model.Backlog">
+  <void method="add">
+   <object class="com.carefulcoding.backlogmanager.model.BacklogItem">
+    <void property="description">
+     <string>Make Scrum program</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.carefulcoding.backlogmanager.model.BacklogItem">
+    <void property="description">
+     <string>Deploy Scrum program</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="com.carefulcoding.backlogmanager.model.BacklogItem">
+    <void property="description">
+     <string>Profit!</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <null/>
+  </void>
+  <void property="index">
+   <int>1</int>
+  </void>
+  <void property="name">
+   <string>backlog</string>
+  </void>
+ </object>
+</java>
