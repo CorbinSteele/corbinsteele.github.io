@@ -39,6 +39,22 @@ container: rectangle
     dtjava.addOnloadCallback(javafxEmbed_fxApplication);
 </script>
 
-<div id='appContainer'></div>
+<div class="sub-container-outer">
+  <h3>Embedded Applet</h3>
+  <div class="sub-container-inner">
+    <div class="row">
+      <div class="col-xs-12">
+        <h4 style="text-align:center">
+          <b>Important: </b>
+          This app is unsigned. In order to run it, you must add this website to your Java Control Panel's Exception Site List.
+          Additionally, a scary warning will pop up, which ironically tells you that the app will run with restricted permissions,
+          and is thus safer to run than a signed app. Sorry, Java is paranoid.
+        </h4>
+      </div>
+      <div id="appContainer" class="col-xs-12">
+      </div>
+    </div>
+  </div>
+</div>
 
 {% include references.html %}
